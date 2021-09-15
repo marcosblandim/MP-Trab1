@@ -6,12 +6,6 @@
 #include "velha.hpp"
 
 
-const int codigoDoX = 1;
-const int codigoDoO = 2;
-const int codigoDoEmpate = 0;
-const int codigoDoJogoIndefinido = -1;
-const int codigoDoJogoImpossivel = -2;
-
 /**
  * @brief verifica situacao do jogo da velha  
  * @author Marcos
