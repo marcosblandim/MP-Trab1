@@ -20,7 +20,8 @@
  */
 int VerificaVelha( int velha[3][3] )
 {
-    int vencedor = ChecaVitoria(velha);
+    int vencedor = verificaVitoria(velha);
+    bool jogoEhPossivel =
 	return vencedor;
 }
 
@@ -34,7 +35,7 @@ int VerificaVelha( int velha[3][3] )
  *  - 1 caso o vencedor seja o X
  *  - 2 caso o vencedor seja o O
  */
-int ChecaVitoria(int velha[3][3])
+int verificaVitoria(int velha[3][3])
 {
     // verifica linhas que passam no centro
     int centro = velha[1][1];
