@@ -6,6 +6,12 @@
 #include "velha.hpp"
 
 
+const int codigoDoX = 1;
+const int codigoDoO = 2;
+const int codigoDoEmpate = 0;
+const int codigoDoJogoIndefinido = -1;
+const int codigoDoJogoImpossivel = -2;
+
 /**
  * @brief verifica situacao do jogo da velha  
  * @author Marcos
@@ -20,9 +26,50 @@
  */
 int VerificaVelha( int velha[3][3] )
 {
+    bool jogoEhPossivel = verificaJogoEhPossivel(velha);
+    if (!jogoEhPossivel)
+    {
+        return codigoDoJogoImpossivel;
+    }
+
     int vencedor = verificaVitoria(velha);
-    bool jogoEhPossivel =
+    if (vencedor != 0)
+    {
+        return vencedor;
+    }
+
 	return vencedor;
+}
+
+/**
+ * @brief indica se o jogo é possível ou não
+ * @author Marcos
+ * @param  velha matriz guardando o estado do tabuleiro
+ *
+ *  Retorna bool indicando se o jogo é possível ou não
+ */
+bool verificaJogoEhPossivel(int velha[3][3])
+{
+    int numeroDeXs = 0;
+    int numeroDeOs = 0;
+
+    for (int linha = 0; linha < 3; ++linha) {
+        for (int coluna = 0; coluna < 3; ++coluna) {
+            int valorAtual = velha[linha][coluna];
+
+            if (valorAtual == codigoDoX)
+            {
+                numeroDeXs++;
+            } else if (valorAtual == codigoDoO)
+            {
+                numeroDeOs++;
+            }
+        }
+    }
+
+    int diferencaEntreXeO = numeroDeXs - numeroDeOs;
+
+    return diferencaEntreXeO == 0 || diferencaEntreXeO == 1;
 }
 
 /**
@@ -88,5 +135,3 @@ int verificaVitoria(int velha[3][3])
 
     return 0;
 }
-
-
