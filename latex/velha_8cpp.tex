@@ -1,0 +1,108 @@
+\hypertarget{velha_8cpp}{}\doxysection{velha.\+cpp File Reference}
+\label{velha_8cpp}\index{velha.cpp@{velha.cpp}}
+{\ttfamily \#include \char`\"{}velha.\+hpp\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{velha_8cpp_a9a79eba727abd2979d43ec648ed428e9}{Verifica\+Velha}} (int velha\mbox{[}3\mbox{]}\mbox{[}3\mbox{]})
+\begin{DoxyCompactList}\small\item\em verifica situacao do jogo da velha ~\newline
+ \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{velha_8cpp_aebcdf8d8fc102328f170ec924ce07b06}{verifica\+Jogo\+Eh\+Possivel}} (int velha\mbox{[}3\mbox{]}\mbox{[}3\mbox{]})
+\begin{DoxyCompactList}\small\item\em indica se o jogo é possível ou não \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{velha_8cpp_a6bab402295eeaf99a2cc6aba171887c5}{verifica\+Vitoria}} (int velha\mbox{[}3\mbox{]}\mbox{[}3\mbox{]})
+\begin{DoxyCompactList}\small\item\em retorna o vencedor, ou 0 caso ele não exista \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{velha_8cpp_a6ff9255e9dbad529a7ad613f4e43d00c}{verifica\+Empate\+Ou\+Indefinido}} (int velha\mbox{[}3\mbox{]}\mbox{[}3\mbox{]})
+\begin{DoxyCompactList}\small\item\em verifica se o jogo está empatado ou indefinido \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{velha_8cpp_a6ff9255e9dbad529a7ad613f4e43d00c}\label{velha_8cpp_a6ff9255e9dbad529a7ad613f4e43d00c}} 
+\index{velha.cpp@{velha.cpp}!verificaEmpateOuIndefinido@{verificaEmpateOuIndefinido}}
+\index{verificaEmpateOuIndefinido@{verificaEmpateOuIndefinido}!velha.cpp@{velha.cpp}}
+\doxysubsubsection{\texorpdfstring{verificaEmpateOuIndefinido()}{verificaEmpateOuIndefinido()}}
+{\footnotesize\ttfamily int verifica\+Empate\+Ou\+Indefinido (\begin{DoxyParamCaption}\item[{int}]{velha\mbox{[}3\mbox{]}\mbox{[}3\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+verifica se o jogo está empatado ou indefinido 
+
+\begin{DoxyAuthor}{Author}
+Marcos 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em velha} & matriz guardando o estado do tabuleiro\\
+\hline
+\end{DoxyParams}
+Retorna\+:
+\begin{DoxyItemize}
+\item 0 se o jogo está empatado
+\item -\/1 se o jogo está indefinido 
+\end{DoxyItemize}\mbox{\Hypertarget{velha_8cpp_aebcdf8d8fc102328f170ec924ce07b06}\label{velha_8cpp_aebcdf8d8fc102328f170ec924ce07b06}} 
+\index{velha.cpp@{velha.cpp}!verificaJogoEhPossivel@{verificaJogoEhPossivel}}
+\index{verificaJogoEhPossivel@{verificaJogoEhPossivel}!velha.cpp@{velha.cpp}}
+\doxysubsubsection{\texorpdfstring{verificaJogoEhPossivel()}{verificaJogoEhPossivel()}}
+{\footnotesize\ttfamily bool verifica\+Jogo\+Eh\+Possivel (\begin{DoxyParamCaption}\item[{int}]{velha\mbox{[}3\mbox{]}\mbox{[}3\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+indica se o jogo é possível ou não 
+
+\begin{DoxyAuthor}{Author}
+Marcos 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em velha} & matriz guardando o estado do tabuleiro\\
+\hline
+\end{DoxyParams}
+Retorna bool indicando se o jogo é possível ou não \mbox{\Hypertarget{velha_8cpp_a9a79eba727abd2979d43ec648ed428e9}\label{velha_8cpp_a9a79eba727abd2979d43ec648ed428e9}} 
+\index{velha.cpp@{velha.cpp}!VerificaVelha@{VerificaVelha}}
+\index{VerificaVelha@{VerificaVelha}!velha.cpp@{velha.cpp}}
+\doxysubsubsection{\texorpdfstring{VerificaVelha()}{VerificaVelha()}}
+{\footnotesize\ttfamily int Verifica\+Velha (\begin{DoxyParamCaption}\item[{int}]{velha\mbox{[}3\mbox{]}\mbox{[}3\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+verifica situacao do jogo da velha ~\newline
+ 
+
+\begin{DoxyAuthor}{Author}
+Marcos 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em velha} & matriz guardando o estado do tabuleiro\\
+\hline
+\end{DoxyParams}
+Retorna\+:
+\begin{DoxyItemize}
+\item 1 se o vencedor foi o X
+\item 2 se o vencedor foi o O
+\item 0 se o jogo está empatado
+\item -\/1 se o jogo está indefinido
+\item -\/2 se o jogo é com certeza impossível pelas regras 
+\end{DoxyItemize}\mbox{\Hypertarget{velha_8cpp_a6bab402295eeaf99a2cc6aba171887c5}\label{velha_8cpp_a6bab402295eeaf99a2cc6aba171887c5}} 
+\index{velha.cpp@{velha.cpp}!verificaVitoria@{verificaVitoria}}
+\index{verificaVitoria@{verificaVitoria}!velha.cpp@{velha.cpp}}
+\doxysubsubsection{\texorpdfstring{verificaVitoria()}{verificaVitoria()}}
+{\footnotesize\ttfamily int verifica\+Vitoria (\begin{DoxyParamCaption}\item[{int}]{velha\mbox{[}3\mbox{]}\mbox{[}3\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+retorna o vencedor, ou 0 caso ele não exista 
+
+\begin{DoxyAuthor}{Author}
+Marcos 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em velha} & matriz guardando o estado do tabuleiro\\
+\hline
+\end{DoxyParams}
+Retorna\+:
+\begin{DoxyItemize}
+\item 0 caso não seja possível determinar o vencedor
+\item 1 caso o vencedor seja o X
+\item 2 caso o vencedor seja o O 
+\end{DoxyItemize}
