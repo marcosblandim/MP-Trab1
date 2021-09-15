@@ -32,7 +32,7 @@ int VerificaVelha( int velha[3][3] )
         return vencedor;
     }
 
-	return vencedor;
+    return verificaEmpateOuIndefinido(velha);
 }
 
 /**
@@ -128,4 +128,18 @@ int verificaVitoria(int velha[3][3])
     }
 
     return 0;
+}
+
+int verificaEmpateOuIndefinido(int velha[3][3])
+{
+    for (int linha = 0; linha < 3; ++linha) {
+        for (int coluna = 0; coluna < 3; ++coluna) {
+            if (velha[linha][coluna] == 0)
+            {
+                return codigoDoJogoIndefinido;
+            }
+        }
+    }
+
+    return codigoDoEmpate;
 }
