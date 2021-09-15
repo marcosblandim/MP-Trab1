@@ -56,3 +56,22 @@ TEST_CASE( "Testa vitória do O", "[single-file]" ) {
     REQUIRE( VerificaVelha(oVence3) == 2 );
     REQUIRE( VerificaVelha(oVence4) == 2 );
 }
+
+TEST_CASE( "Testa jogo impossível", "[single-file]" ) {
+    int jogoImpossivel1[3][3]= {   { 1, 1, 1 },
+                                   { 1, 1, 1 },
+                                   { 1, 1, 1 }
+    };
+    int jogoImpossivel2[3][3]= {   { 1, 1, 2 },
+                                   { 1, 2, 2 },
+                                   { 2, 2, 2 }
+    };
+    int jogoImpossivel3[3][3]= {   { 2, 2, 2 },
+                                   { 2, 2, 2 },
+                                   { 2, 2, 2 }
+    };
+
+    REQUIRE( VerificaVelha(jogoImpossivel1) == -2 );
+    REQUIRE( VerificaVelha(jogoImpossivel2) == -2 );
+    REQUIRE( VerificaVelha(jogoImpossivel3) == -2 );
+}
